@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 id="test">Create Object from JSON String</h2>
+
+<p id="demo"></p>
+
+<script>
+var text = '{"employees":[' +
+'{"Name":"abyss-pe","display_name":"Abyss Paired-End","version": "1.0.0","description": "Assemble short paired reads" },' +
+'{"Name":"WigAdd","display_name":"Add","version": "1.1.0","description": "multiple (Big)Wig files" },' +
+'{"Name":"gd_add_fst_column","display_name":"Per-SNP FSTs","version": "1.2.0","description": "Assemble short paired reads" }]}';
+
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.employees[0].description;
+document.getElementById("test").innerHTML = obj.employees[].description;
+</script>
+
+</body>
+</html>

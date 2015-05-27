@@ -1,0 +1,360 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 7, 2014, 4:23:58 PM
+    Author     : Joseph Mammo
+
+*/
+
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	/*background: #DFE2DB;*/
+	font-family: 'Georgia', arial, sans-serif;
+	font-weight: 200;
+}
+a:hover img {
+
+	-moz-box-shadow: 0 0 5px #3D4C3D;
+	-webkit-box-shadow: 0 0 5px #3D4C3D;
+	box-shadow: 0px 0px 5px #3D4C3D;
+}
+/*Border for the run images */
+.smile {
+	background: #cfcfcf;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border-left: thin solid #B8B8B8;
+	border-right: thin solid #B8B8B8;
+	border-top: thin solid #B8B8B8;
+	border-bottom: thin solid #B8B8B8;
+}
+/*Border for individual images*/
+.bor{
+	background: #FAFFFA;
+	-webkit-border-radius: 50px;
+	-moz-border-radius: 50px;
+	border-radius: 50px;
+	border-left: thin solid #B8B8B8;
+	border-right: thin solid #B8B8B8;
+	border-top: thin solid #B8B8B8;
+	border-bottom: thin solid #B8B8B8;
+	box-shadow: 5px 15px 5px #888888;
+}
+/*Class to have the fixed Div tag for running the tools from the side*/
+.scroll{
+	position:absolute;
+  	left :150px;
+    top  :10px;
+	text-align: right;
+	float: right; 
+	width: 20px; 
+	position:fixed;
+
+}
+.ver{
+	border-right: thin solid #B8B8B8;
+}
+.righter{
+float: left;
+	
+}
+.resize{
+}
+.discriptionPad{
+	line-height: 15px;
+	width: 100%;
+	height: 60px;
+}
+/* Class for the tools icon */
+.lefter{
+	position: relative;
+	text-align: center;
+
+	width: 50%;
+}
+.careless{
+	position: relative;
+	text-align: right;
+	margin: 0 10px 50px 10px;
+}
+h1 {
+	font-family: 'Oswald', sans-serif;
+	font-size: 4em;
+	font-weight: 400;
+	margin: 0 0 20px;
+	text-align: center;
+	text-shadow: 1px 1px 0 #fff, 2px 2px 0 #bbb;
+}
+hr {
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #fff;
+	margin: 25px 0;
+	clear: both;
+}
+.centered {
+	text-align: center;
+}
+.wrapper {
+	width: 100%;
+	padding: 30px 0;
+}
+.container {
+	width: 1200px;
+	margin: 0 auto;
+}
+.containerr {
+	width: 140px;
+	text-align: center;
+	margin: 0 auto;
+}
+ul.grid-nav {
+	list-style: none;
+	font-size: .85em;
+	font-weight: 200;
+	text-align: center;
+}
+ul.grid-nav li {
+	display: inline-block;
+}
+ul.grid-nav li a {
+	display: inline-block;
+	background: #999;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+ul.grid-nav li a:hover {
+	background: #7b0;
+}
+ul.grid-nav li a.active {
+	background: #333;
+}
+.grid-container {
+	display: none;
+	/*background: #DFE2DB;*/
+}
+/* ----- Image grids ----- */
+ul.rig {
+	list-style: none;
+	font-size: 0px;
+	margin-left: -2.5%; /* should match li left margin */
+
+}
+ul.rig li {
+	display: inline-block;
+	padding: 10px;
+	margin: 0 0 2.5% 2.5%;
+
+	/*background: #fff;*/
+	border: 1px solid #ddd;
+	font-size: 16px;
+	font-size: 1rem;
+	vertical-align: top;
+	/*box-shadow: 0 0 5px #ddd;*/
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+ul.rig li img {
+	max-width: 100%;
+	height: auto;
+	margin: 0 0 10px;
+	
+
+}
+ul.rig li h3 {
+	margin: 0 0 5px;
+}
+ul.rig li p {
+	font-size: .9em;
+	line-height: 1.5em;
+	color: #999;
+}
+/* class for 2 columns */
+ul.rig.columns-2 li {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.rig.columns-3 li {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 li {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+
+/* class for 2 img */
+ul.rig.columns-2 img {
+	width: 47.5%; /* this value + 2.5 should = 50% */
+}
+/* class for 3 columns */
+ul.rig.columns-3 img {
+	width: 30.83%; /* this value + 2.5 should = 33% */
+}
+/* class for 4 columns */
+ul.rig.columns-4 img {
+	width: 22.5%; /* this value + 2.5 should = 25% */
+}
+@media (max-width: 1199px) {
+	.container {
+		width: auto;
+		padding: 0 10px;
+	}
+	.containerr {
+		width: 60px;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+/*
+Need to work on the transparent links... and resizing the imagges ...
+*/
+@media (max-width: 480px) {
+	ul.grid-nav li {
+		display: block;
+		margin: 0 0 5px;
+	}
+	ul.grid-nav li a {
+		display: block;
+	}
+	ul.rig {
+		margin-left: 0;
+	}
+	ul.rig li {
+		width: 100% !important; /* over-ride all li styles */
+		margin: 0 0 20px;
+	}
+}
+
+
+/* Home */
+ul.home-nav {
+	list-style: none;
+	font-size: .85em;
+	font-weight: 200;
+	text-align: center;
+	margin-bottom: 0px;
+}
+ul.home-nav li {
+	display: inline-block;
+}
+ul.home-nav li a {
+	display: inline-block;
+	background: #999;
+	margin-bottom: 5px;
+	color: #fff;
+	padding: 5px 20px;
+	text-decoration: none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+ul.home-nav li a:hover {
+	background: #7b0;
+}
+ul.home-nav li a.active {
+	background: #333;
+}
+.home-container {
+	display: none;
+}
+
+
+
+/* Help */
+ul.help-nav {
+	list-style: none;
+	font-size: .85em;
+	font-weight: 200;
+	text-align: center;
+}
+ul.help-nav li {
+	display: inline-block;
+}
+ul.help-nav li a {
+	display: inline-block;
+	background: #999;
+	color: #fff;
+	padding: 10px 20px;
+	text-decoration: none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+ul.help-nav li a:hover {
+	background: #7b0;
+}
+ul.help-nav li a.active {
+	background: #333;
+}
+.help-container {
+	display: none;
+}
+
+
+/*OLD search box*/
+
+#tfheader{
+		
+		display: none;
+	}
+	#tfnewsearch{
+		float:center;
+		padding:20px;
+	}
+	.tftextinput{
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		border:1px solid #0076a3; border-right:0px;
+		border-top-left-radius: 5px 5px;
+		border-bottom-left-radius: 5px 5px;
+	}
+	.tfbutton {
+		margin: 0;
+		padding: 5px 15px;
+		font-family: Arial, Helvetica, sans-serif;
+		font-size:14px;
+		outline: none;
+		cursor: pointer;
+		text-align: center;
+		text-decoration: none;
+		color: #ffffff;
+		border: solid 1px #0076a3; border-right:0px;
+		background: #0095cd;
+		background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+		background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+		border-top-right-radius: 5px 5px;
+		border-bottom-right-radius: 5px 5px;
+	}
+	.tfbutton:hover {
+		text-decoration: none;
+		background: #007ead;
+		background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+		background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+	}
+	/* Fixes submit button height problem in Firefox */
+	.tfbutton::-moz-focus-inner {
+	  border: 0;
+	}
+	.tfclear{
+		clear:both;
+
+	}
+/* end search box*/
+
+
+

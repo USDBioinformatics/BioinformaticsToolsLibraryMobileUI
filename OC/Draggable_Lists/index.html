@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bioinformatics Tools Library</title>
+<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+<link href='index_grid.css' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+
+<div class="wrapper">
+	<div class="container">
+		<h1>Bioinformatics Tools Library</h1>
+		
+		<hr />
+		
+		<div id="two-columns" class="grid-container" style="display:inline;">
+			<ul class="rig columns-2">
+				<li id="movable_links">
+					 <img  onclick="" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/search.png" width ="170" height="200" alt="" align="middle"/>
+                               </li>
+				<li id="movable_link_1">
+					<img  onclick="window.open('Grid.html', '_self');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/list_ingredients.png" width ="170" height="200" alt="" align="middle"/>
+				</li>
+				<li id="movable_link_2">
+					<img onclick="window.open('tree.html', '_target');" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/customer_support-512.png" width ="170" height="200" alt="" align="middle"/>
+				</li>
+				<li id="movable_link_3">
+					 <img  onclick="" onmouseover="this.border='1'" onmouseout="this.border='0'" src="img/workflow.png" width ="170" height="200" alt=""/>
+				</li>
+			</ul>
+		</div>
+		<!--/#two-columns-->
+		
+		
+		<hr />
+	
+	</div>
+	<!--/.container-->
+</div>
+<!--/.wrapper-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.grid-nav li a').on('click', function(event){
+		event.preventDefault();
+		$('.grid-container').fadeOut(500, function(){
+			$('#' + gridID).fadeIn(500);
+		});
+		var gridID = $(this).attr("data-id");
+		
+		$('.grid-nav li a').removeClass("active");
+		$(this).addClass("active");
+	});
+});
+</script>
+<!--Touch_event-->
+        <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+        
+        <script src="jquery.ui.touch-punch.min.js"></script>
+
+
+        <script>$('#movable_links').draggable();$('#movable_link_1').draggable();$('#movable_link_2').draggable();$('#movable_link_3').draggable();</script>
+
+<!--End Touch_event-->
+</body>
+</html>

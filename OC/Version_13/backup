@@ -1,0 +1,15 @@
+
+
+<!--JSON Caller Script-->
+<script>
+var tools = '{"employees":[' +
+'{"Name":"abyss-pe","display_name":"Abyss Paired-End","version": "1.0.0","description": "Assemble short paired reads" },' +
+'{"Name":"WigAdd","display_name":"Add","version": "1.1.0","description": "multiple (Big)Wig files" },' +
+'{"Name":"gd_add_fst","display_name":"Per-SNP FSTs","version": "1.2.0","description": "Assemble short paired reads" }]}';
+
+obj = JSON.parse(tools);
+document.getElementById("tool1").innerHTML = obj.employees[0].Name;
+document.getElementById("tool2").innerHTML = obj.employees[1].Name;
+document.getElementById("tool3").innerHTML = obj.employees[2].Name;
+</script>
+<!--End JSON caller Script-->

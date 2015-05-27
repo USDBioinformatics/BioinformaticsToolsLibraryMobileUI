@@ -1,0 +1,62 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<!-- START JSON Parser -->
+<script>
+
+    $(function() {
+
+
+   var tools = [];
+
+   $.getJSON('tools_structured.json', function(data) {
+       $.each(data.tools, function(i, f) {
+
+           var tblRow = "<tr>" + "<td>" + f.name + "</td>" +
+           "<td>" + f.display_name + "</td>" + "<td>" + f.version + "</td>" + "<td>" + f.summary + "</td>" + "<td>" + f.description + "</td>" + "<td>" + f.example + "</td>" +"<td>" + f.links + "</td>" +"<td>" + f.references + "</td>" +"<td>" + f.availability + "</td>" +"<td>" + f.technology + "</td>" +"<td>" + f.programming_language + "</td>" +"<td>" + f.license + "</td>" +"<td>" + f.operating_system + "</td>" +"<td>" + f.inputs + "</td>" +"</tr>" 
+          // $(tblRow).appendTo("#userdata tbody");
+
+           var plane = f.name
+           $(plane).appendTo("#userdata tbody");
+     });
+
+   });
+
+});
+
+</script>
+<!-- END JSON Parser -->
+</head>
+
+<body>
+
+<div class="wrapper">
+<div class="profile">
+<h2 id="applicationTest">test</h2>
+   <table id= "userdata" border="2">
+  <thead>
+            <th>Name</th>
+            <th>Display Name</th>
+            <th>Version</th>
+            <th>Summary</th>
+            <th>description</th>
+            <th>example</th>
+            <th>links</th>
+            <th>references</th>
+            <th>availability</th>
+            <th>technology</th>
+            <th>programming_language</th>
+            <th>license</th>
+            <th>operating_system</th>
+            <th>inputs</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+</div>
+</div>
+
+</body>
+</html>

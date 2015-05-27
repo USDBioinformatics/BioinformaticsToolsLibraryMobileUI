@@ -1,0 +1,73 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+<script type="text/json" language="json" src="tools_structured.json"></script>
+<!-- START JSON Parser -->
+<script>
+
+
+ $(function() {
+
+   $.getJSON('tools_structured.json', function(data) {
+
+
+   		// Displays the tools in a table
+       $.each(data.tool, function(i, f) {
+		 var tool_div_row = "<div style='border:2px solid #ff0000'>" + "<h1>" + f.name + "</h1>" + "<h2>" + f.version + "</h2>"  +  "<h3>" + f.summary + "</h3>"  +"</div>"
+        $(tool_div_row).appendTo("#tool_wrapper");
+
+
+
+     });
+
+		$.each(data.tool, function() { 
+		    console.log($(this)[0])
+		    // Create a for loop
+		 document.getElementById("tester").innerHTML = data.tool[0].name
+		})
+
+   });
+});
+
+</script>
+<!-- END JSON Parser -->
+</head>
+
+<body>
+
+<div id="tool_wrapper" style="border:2px solid #ff0000">
+
+</div>
+
+
+<div class="wrapper">
+<div class="profile">
+<h1 id= "tester"> test</h1>
+   <table id= "userdata" border="2">
+  <thead>
+            <th>Name</th>
+            <th>Display Name</th>
+            <th>Version</th>
+            <th>Summary</th>
+           <th>description</th>
+           <th>example</th>
+           <th>links</th>
+           <th>references</th>
+           <th>availability</th>
+           <th>technology</th>
+           <th>programming_language</th>
+           <th>license</th>
+           <th>operating_system</th>
+           <th>inputs</th>
+        </thead>
+      <tbody>
+
+       </tbody>
+   </table>
+
+
+</div>
+</div>
+
+</body>
+</html>
